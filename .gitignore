@@ -1,0 +1,9 @@
+build
+*.spv
+*.blend1
+*.blend2
+.vscode/settings.json
+src/shadergen/out/*
+*.pyc
+data
+.vscode
