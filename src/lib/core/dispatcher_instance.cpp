@@ -27,17 +27,17 @@ static std::mutex mux;
 static Dispatcher *dispatcher = nullptr;
 
 Dispatcher *cst::getDispatcher() {
-	std::unique_lock lock(mux);
-	if(dispatcher == nullptr)
-		dispatcher = new Dispatcher();
+  std::unique_lock lock(mux);
+  if (dispatcher == nullptr)
+    dispatcher = new Dispatcher();
 
-	return dispatcher;
+  return dispatcher;
 }
 
 void cst::destroyDispatcher() {
-	std::unique_lock lock(mux);
-	if(dispatcher != nullptr) {
-		delete dispatcher;
-		dispatcher = nullptr;
-	}
+  std::unique_lock lock(mux);
+  if (dispatcher != nullptr) {
+    delete dispatcher;
+    dispatcher = nullptr;
+  }
 }
