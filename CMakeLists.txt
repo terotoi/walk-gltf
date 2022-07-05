@@ -1,5 +1,3 @@
-list(APPEND CMAKE_PREFIX_PATH /home/gorp/opt/lib/cmake/SDL2)
-
 cmake_minimum_required(VERSION 3.7)
 project(walk-gltf)
 
